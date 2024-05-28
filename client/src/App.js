@@ -8,6 +8,7 @@ import RegisterPage from './pages/RegisterPage.js';
 import Header from './components/Header.js';
 import TaskEditForm from './components/TaskEditForm.js';
 import AuthContext from './context/AuthContext.js';
+import TaskDetail from './pages/TaskDetailPage.js';
 
 const App = () => {
   const {user} = useContext(AuthContext)
@@ -24,6 +25,8 @@ const App = () => {
           <Route path="/taskedit" element={<TaskEditForm />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<RegisterPage />} />
+          <Route path="/taskdetailpage/:id" element={<TaskDetail />} />
+          
         </Routes>
       </BrowserRouter>
 

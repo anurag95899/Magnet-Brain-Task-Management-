@@ -9,6 +9,8 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  //handle Submit function is responsible for sending form data to particular server api.
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     await login(username, password);

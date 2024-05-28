@@ -8,6 +8,8 @@ const TaskList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [tasksPerPage] = useState(5);
 
+//fetchTasks Function is used to get all the tasks from database.
+
   const fetchTasks = async () => {
     const response = await axios.get('/tasks');
     setTasks(response.data);

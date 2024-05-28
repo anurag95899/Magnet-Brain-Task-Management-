@@ -24,12 +24,23 @@
 }
 
 .taskDetail>.edit{
-  
+    padding: 8px 20px;
+    background-color: royalblue;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
     background-color:rgb(117, 203, 59);
    
 }
 
 .taskDetail>.del{
+    padding: 8px 20px;
+    background-color: royalblue;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
     background-color: rgb(241, 48, 48);
    
 }
