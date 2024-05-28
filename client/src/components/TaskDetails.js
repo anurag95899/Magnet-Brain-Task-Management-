@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from '../utils/axios.js';
 import TaskEditForm from './TaskEditForm';
 import '../App.css'
@@ -9,6 +9,7 @@ import moment from 'moment';
 
 
 const TaskDetails = ({ task, fetchTasks }) => {
+ 
 
   //format the date which is coming from database.
   const formattedDate = moment(task.dueDate).format('DD/MM/YYYY');

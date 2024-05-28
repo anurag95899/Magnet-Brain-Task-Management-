@@ -10,27 +10,28 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (username, password) => {
-    const response = await axios.post('http://localhost:8080/api/users/login', { username, password });
+    const response = await axios.post('/users/login', { username, password });
     localStorage.setItem('currentUser',JSON.stringify(response.data.user));
     console.log("Hello ",response);
-    // setUser(response.data.user);
+    setUser(response.data.user);
+  
   };
 
 
 
 
   const register = async (username, password) => {
-   const response = await axios.post('http://localhost:8080/api/users/register', { username, password })
+   const response = await axios.post('/users/register', { username, password })
   //  console.log("Api Data",response); 
    setUser(response.data.user);
 
   };
 
   const logout = async () => {
-    localStorage.removeItem('token');
-    await axios.post('http://localhost:8080/api/users/signout')
-    delete axios.defaults.headers.common['Authorization'];
-    setUser(null);
+    localStorage.removeItem('currentUser');
+    await axios.post('/users/signout')
+    // delete axios.defaults.headers.common['Authorization'];
+    setUser();
   };
 
   return (
